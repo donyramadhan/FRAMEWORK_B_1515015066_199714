@@ -14,7 +14,7 @@ class BuatTablePengguna extends Migration
     {
         Schema::create('pengguna', function (Blueprint $table) {
             $table->increments('id');
-            $table->String("user name");
+            $table->String("username");
             $table->String("password");
             $table->remembertoken();
             $table->timestamps();
