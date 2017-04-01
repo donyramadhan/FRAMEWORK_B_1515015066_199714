@@ -20,9 +20,16 @@ class MahasiswaController extends Controller
     	$mahasiswa = new Mahasiswa();
     	$mahasiswa->nama = "Dony Ramadhan";
     	$mahasiswa->nim = "1515015066";
-    	$mahasiswa->alamat = "trisari";
+    	$mahasiswa->alamat = "Trisari";
     	$mahasiswa->pengguna_id = 3;
     	$mahasiswa->save();
     	return "Data Mahasiswa dengan Nama {$mahasiswa->nama} telah disimpan";
 }
+    public function mahasiswa(){
+        $mahasiswa = mahasiswa::find(1);
+
+        echo "Nama : ".$mahasiswa->nama;
+        echo "<br>";
+        echo "Username : ".$mahasiswa->pengguna->username;
+    }
 }
