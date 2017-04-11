@@ -24,4 +24,11 @@ public function awal()
 	 $dosenmatkul->save();
 	 return "data dosen matkul dengan ID {$dosenmatkul->dosen_id} telah disimpan";
  }
+   public function dosen(){
+   $dosen = dosen::all();
+
+   echo "Id :".$dosen->id;
+   echo "<br>";
+   echo "Nama :".$dosen->dosen_matakuliah->nama;
+}
 }
